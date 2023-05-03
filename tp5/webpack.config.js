@@ -91,6 +91,12 @@ module.exports = {
                to: 'style/[name][ext]',
                noErrorOnMissing: true,
             },
+            {
+               context: path.resolve(__dirname, 'vendor'),
+               from: '**/*.js',
+               to: 'vendor',
+               noErrorOnMissing: true,
+            },
          ]
       }),
    ],
