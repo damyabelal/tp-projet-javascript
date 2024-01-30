@@ -2,7 +2,6 @@
 
   Le [sujet du TP](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/tdtp/exercices-javascript-balles.html).
 
-
 ## Mise en place du TP
 
 On utilise ici le [template de TP](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/html/template-app.html) mis à disposition.
