@@ -13,7 +13,7 @@ N'oubliez pas d'ajouter votre enseignant de TP à ce dépôt git.
 
 
 ## ressources
- - Les [sujets de TP](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/tdtp/) et le [semainier](https://portail.fil.univ-lille1.fr/portail/index.php?dipl=L&sem=S4&ue=JS&label=Semainier) de l'UE.
+ - Les [sujets de TP](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/tdtp/) et le [semainier](https://portail.fil.univ-lille.fr/portail/index.php?dipl=L&sem=S4&ue=JS&label=Semainier) de l'UE.
  - Ce [document](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/html/template-app.html) présente le template de TP qui sera utilisé (sauf pour le premier TP). Prenez en connaissance.
  -  Il est certainement utile, voire indispensable, d'apprendre à utiliser le debugger de Firefox, voici une [très rapide vidéo d'introduction au debugger de Firefox](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/videos/debugger.m4v)
 
