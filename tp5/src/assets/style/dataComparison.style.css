@@ -6,7 +6,7 @@ div.dataComparison div.meteoData {
     display : flex;
 }
 
-div.dataComparison div.dataSummary div.meteoData {   
+div.dataComparison div.meteoData {   
     display: flex;  
     justify-content: center;
 }
