@@ -6,10 +6,15 @@ body {
   margin : 0% 2%;
 }
 
-kbd {
-  padding : 0px 2px;
-  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-  color : rgb(60,60,60);
-  font-weight : bold;
-  font-size : large;
+
+select { 
+  font-size : larger
+}
+
+body > p {
+  margin : 10px 20px;
+  color : #888;
+}
+body > p a {
+  color : #666;
 }
