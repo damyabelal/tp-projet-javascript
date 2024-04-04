@@ -1,3 +1,7 @@
+import '../assets/style/murImages.css';
+
+import dataImages from "../data/dataImages.js"
+
 const ImageApp = () => {
 
   return (
