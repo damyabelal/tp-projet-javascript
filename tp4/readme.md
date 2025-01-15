@@ -5,7 +5,8 @@
 
 ## Mise en place du TP
 
-  Cette mise en place est similaire à celle du TP précédent. Le dossier `tp3` contient une structure telle que celle décrite dans ce [document](https://intranet.fil.univ-lille.fr/2020/04/09/nodejs-et-npm/).  
+  Cette mise en place est similaire à celle du TP précédent. Le dossier `tp4` contient une structure telle que celle décrite dans ce [document](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/html/template-app.html).  
+  
   1. Dans le dossier `tp4/` exécutez
 ```bash  	  
 tp4$  npm install

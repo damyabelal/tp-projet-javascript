@@ -1,8 +1,9 @@
-# TP 5 : projet 2
+# TP 5 : projet 2 "React"
 
 ## Mise en place du TP
 
-  Cette mise en place est similaire à celle du TP précédent. Le dossier `tp3` contient une structure telle que celle décrite dans ce [document](https://intranet.fil.univ-lille.fr/2020/04/09/nodejs-et-npm/).  
+  Cette mise en place est similaire à celle du TP précédent. Le dossier `tp5` contient une structure telle que celle décrite dans ce [document](https://www.fil.univ-lille.fr/~routier/enseignement/licence/js-s4/html/template-app.html).
+
   1. Dans le dossier `tp5/` exécutez
 ```bash  	  
 tp5$  npm install
