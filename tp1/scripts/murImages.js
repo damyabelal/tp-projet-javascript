@@ -18,7 +18,6 @@ const init = () => {
   filtre.addEventListener('keyup', filtreImages);
 }
 
-window.addEventListener('DOMContentLoaded', init);
 
 /* crée un élément HTML IMG dont les attributs src, alt et title sont définis par l'objet imageData fourni
   * @return l'élément HTML IMG créé
@@ -48,6 +47,7 @@ const details = event => {
 *     les autres doivent être masqués.
 *   On ne s'occupe pas de la casse des caractères (minuscules ou majuscules) lors du filtrage.
 */
-const filtreImages = event => {
-
+const filtreImages = event => {  
 }
+
+init();
