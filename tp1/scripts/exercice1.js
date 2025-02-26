@@ -64,6 +64,18 @@ const listUpper = list => list.map(elt => elt.name.charAt(0).toUpperCase());
 console.log(`Q2 - : ${listUpper(persons)}`);
 
 
+// Q3
+/* return the list of first letter then the second then third .. of all names of persons 
+ * @param persons (persons) list of persons
+ * @return (list) of n letter of all names of persons
+*/
+const listIndex = list => list.map((elt, index) => elt.name.charAt(index) || undefined);
+
+// Q3
+// test d'execution de la fonction listIndex
+console.log(`Q3 - : ${listIndex(persons)}`);
+
+
 
 
 /*********************************************/
