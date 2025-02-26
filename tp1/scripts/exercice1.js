@@ -229,6 +229,18 @@ numbers.forEach(number => console.log(number));
 */
 persons.forEach(person => console.log(`${person.name} a ${person.age} ans`));
 
+// Q3 :
+/* reprogram forEach 
+ * @param list (Array) list of elements
+ * @param func (Function) function to apply to each element
+*/
+const myForEach = (list, func) => {
+    for (let elt of list) {
+        func(elt);
+    }
+};
+
+
 
 
 
