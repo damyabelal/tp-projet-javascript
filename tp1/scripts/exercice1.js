@@ -201,10 +201,16 @@ console.log(`Q1 - multipliedNumbers: ${multipliedNumbers}`);
  * @param l (Array) list of numbers
  * @return (Array) the list of multiplied numbers
 */
-const multiples = (n, l) => l.map(number => number * n);
+const multiples = (n, list) => list.map(number => number * n);
 
 // tests d'exécution de la fonction multiples
 console.log(`Q2 - multiples(10, numbers): ${multiples(2, numbers)}`);
+
+// Q3 : 
+const multiples5 = list => list.map(number => number * 5);
+
+// tests d'exécution de la fonction multiples5
+console.log(`Q3 - multiples5(numbers): ${multiples5(numbers)}`);
 
 /*********************************************/
 
