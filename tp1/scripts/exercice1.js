@@ -76,7 +76,30 @@ const listIndex = list => list.map((elt, index) => elt.name.charAt(index) || und
 console.log(`Q3 - : ${listIndex(persons)}`);
 
 
+// Q4
 
+// Q4.1
+/* capitalize the first letter of the string
+ * @param str (string) input string
+ * @return (string) string with the first letter capitalized
+*/
+const capitalize = str => str.charAt(0).toUpperCase() + str.substr(1);
+
+// Q4.1
+// tests d'exécution de la fonction capitalize
+console.log(`Q4.1  : ${capitalize('timoleon')}`);
+console.log(`Q4.1  : ${capitalize('bilbo')}`);
+
+// Q4.2 
+/* return the list of all names of persons with the first letter capitalized
+ * @param persons (persons) list of persons
+ * @return (list) of all names
+*/
+const listNamesCapitalize = list => list.map( elt => capitalize(elt.name));
+
+// Q4.2 
+// test d'exéciton de la fonction capitalize 
+console.log(`Q4.2  : ${listNamesCapitalize(persons)}`);
 
 /*********************************************/
 
