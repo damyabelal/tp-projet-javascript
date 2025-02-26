@@ -47,9 +47,21 @@ console.log(` *** EXERCICE 2 *** `);
 */
 const listNames = list =>  list.map( elt => elt.name);
 
-//Q2
+//Q1
 // tests d'exécution de la fonction listNames
 console.log(`Q1 - : ${listNames(persons)}`);
+
+
+// Q2
+/* return the list of first letter of all names of persons in Upper
+ * @param persons (persons) list of persons
+ * @return (list) of irst letter of all names of persons in Upper
+*/
+const listUpper = list => list.map(elt => elt.name.charAt(0).toUpperCase());
+
+// Q2 
+// test d'execution de la fonction listUpper
+console.log(`Q2 - : ${listUpper(persons)}`);
 
 
 
