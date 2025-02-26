@@ -9,7 +9,7 @@ N'oubliez pas d'ajouter votre enseignant de TP à ce dépôt git.
 
 ## étudiant
 
- - nom1 prénom1
+ - BELAL DAMYA
 
 
 ## ressources
