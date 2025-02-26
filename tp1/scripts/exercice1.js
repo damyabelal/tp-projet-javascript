@@ -154,6 +154,16 @@ console.log(`shiftCodePoint('a') : ${shiftCodePoint('a')}`);
 console.log(`shiftCodePoint('b') : ${shiftCodePoint('b')}`);
 console.log(`shiftCodePoint('c') : ${shiftCodePoint('c')}`);
 
+// Q3 : 
+
+const shiftCodePointList = str => str.split('').map(shiftCodePoint);
+
+// tests d'exécution de la fonction shiftCodePointList
+console.log(`shiftCodePointList('timoleon') : ${shiftCodePointList('timoleon')}`);
+
+
+
+
 /*********************************************/
 
 
