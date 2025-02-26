@@ -240,10 +240,10 @@ const myForEach = (list, func) => {
     }
 };
 
-
-
-
-
+// Q4
+// tests d'exécution de la fonction myForEach
+myForEach(numbers, number => console.log(`Q4 - myForEach number: ${number}`));
+myForEach(persons, person => console.log(`Q4 - myForEach person: ${person.name} a ${person.age} ans`));
 
 
 /*********************************************/
