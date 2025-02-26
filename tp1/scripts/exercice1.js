@@ -1,4 +1,4 @@
-'use strict';
+    'use strict';
 
 // des listes pour des tests
 const numbers = [2, 3, 5, 4, 10, 6];
@@ -39,6 +39,19 @@ console.log(`Q4 - example2(numbers, 5) : ${example2(numbers, 5)}`);
 
 /********** EXERCICE 2 ***********************/
 console.log(` *** EXERCICE 2 *** `);
+
+// Q1
+/* return the list of all names of persons
+ * @param persons (persons) list of persons
+ * @return (list) of all names
+*/
+const listNames = list =>  list.map( elt => elt.name);
+
+//Q2
+// tests d'exécution de la fonction listNames
+console.log(`Q1 - : ${listNames(persons)}`);
+
+
 
 
 /*********************************************/
