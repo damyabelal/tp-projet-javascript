@@ -185,6 +185,26 @@ console.log(`Q4 - shiftCodePointList2(persons) : ${shiftCodePointList2(persons)}
 /********** EXERCICE 4 ***********************/
 console.log(` *** EXERCICE 4 *** `);
 
+// Q1 : 
+/* multiply each element of the list by 10
+ * @param numbers (Array) list of numbers
+ * @return (Array) the list of multiplied numbers
+*/
+const multipliedNumbers = numbers.map(number => number * 10);
+
+// tests d'exécution de la fonction multipliedNumbers
+console.log(`Q1 - multipliedNumbers: ${multipliedNumbers}`);
+
+// Q2 :
+/* multiply each element of the list by n
+ * @param n (Number) multiplier
+ * @param l (Array) list of numbers
+ * @return (Array) the list of multiplied numbers
+*/
+const multiples = (n, l) => l.map(number => number * n);
+
+// tests d'exécution de la fonction multiples
+console.log(`Q2 - multiples(10, numbers): ${multiples(10, numbers)}`);
 
 /*********************************************/
 
