@@ -18,8 +18,8 @@ const example = x => x * 2;
 
 //Q2
 // tests d'exécution de la fonction example
-console.log(`example(10) : ${example(10)}`);
-console.log(`example(21) : ${example(21)}`);
+console.log(`Q2 - example(10) : ${example(10)}`);
+console.log(`Q2 - example(21) : ${example(21)}`);
 
 // Q3
 /* filter and keep the elements of *list* smaller than *max*
@@ -31,7 +31,7 @@ const example2 = (list, max) => list.filter( elt => elt < max );
 
 // Q4
 // tests d'exécution de la fonction example2
-console.log(`example2(numbers, 5) : ${example2(numbers, 5)}`);
+console.log(`Q4 - example2(numbers, 5) : ${example2(numbers, 5)}`);
 
 /*********************************************/
 
