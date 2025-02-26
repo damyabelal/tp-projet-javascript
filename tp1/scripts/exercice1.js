@@ -122,13 +122,37 @@ const myMap = (list, func) => {
 console.log(`Q5.2  : ${myMap(persons, elt => capitalize(elt.name))}`);
 
 
-
 /*********************************************/
 
 
 /********** EXERCICE 3 ***********************/
 console.log(` *** EXERCICE 3 *** `);
 
+// Q1 : 
+const ages = persons.map( person => person.age );
+const maxAge = Math.max(...ages);
+const timoStr = 'timoleon';
+const timoArray = [...timoStr];                         
+const newTimoStr = timoArray.join('-');
+
+console.log(`ages  : ${ages}`);
+console.log(`maxAge: ${maxAge}`);
+console.log(`timoStr  : ${timoStr}`);
+console.log(`timoArray  : ${timoArray}`);
+console.log(`newTimoStr  : ${newTimoStr}`);
+
+// Q2 : 
+
+/* give the code point of a character
+ * @param char (String) a character
+ * @return (Number) the code point of the character
+*/  
+const shiftCodePoint = char => char.codePointAt(0) - 'a'.codePointAt(0) + 9398;
+
+// tests d'exécution de la fonction shiftCodePoint
+console.log(`shiftCodePoint('a') : ${shiftCodePoint('a')}`);
+console.log(`shiftCodePoint('b') : ${shiftCodePoint('b')}`);
+console.log(`shiftCodePoint('c') : ${shiftCodePoint('c')}`);
 
 /*********************************************/
 
