@@ -101,6 +101,28 @@ const listNamesCapitalize = list => list.map( elt => capitalize(elt.name));
 // test d'exéciton de la fonction capitalize 
 console.log(`Q4.2  : ${listNamesCapitalize(persons)}`);
 
+//Q5 
+
+// Q5.1 
+/* program the map function 
+ * @param list (Array) list of elements
+ * @param func (Function) function to apply to each element
+ * @return (Array) new list with the results of applying the callback
+*/
+const myMap = (list, func) => {
+    const res = new Array();
+    for (let elt of list) {
+        res.push(func(elt));
+    }
+    return res;
+};
+
+// Q5.2 
+// test d'exécution de la fonction myMap
+console.log(`Q5.2  : ${myMap(persons, elt => capitalize(elt.name))}`);
+
+
+
 /*********************************************/
 
 
