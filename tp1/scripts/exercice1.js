@@ -204,12 +204,15 @@ console.log(`Q1 - multipliedNumbers: ${multipliedNumbers}`);
 const multiples = (n, l) => l.map(number => number * n);
 
 // tests d'exécution de la fonction multiples
-console.log(`Q2 - multiples(10, numbers): ${multiples(10, numbers)}`);
+console.log(`Q2 - multiples(10, numbers): ${multiples(2, numbers)}`);
 
 /*********************************************/
 
 /********** EXERCICE 5 ***********************/
 console.log(` *** EXERCICE 5 *** `);
+
+
+
 
 
 /*********************************************/
