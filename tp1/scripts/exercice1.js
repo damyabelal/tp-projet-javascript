@@ -217,6 +217,12 @@ console.log(` *** EXERCICE 5 *** `);
 */
 numbers.forEach(number => console.log(number));
 
+// Q2 :
+/* print each element of the list
+ * @param persons (Array) list of persons
+*/
+persons.forEach(person => console.log(`${person.name} a ${person.age} ans`));
+
 
 
 
