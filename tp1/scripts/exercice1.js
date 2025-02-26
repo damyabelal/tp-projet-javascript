@@ -135,11 +135,11 @@ const timoStr = 'timoleon';
 const timoArray = [...timoStr];                         
 const newTimoStr = timoArray.join('-');
 
-console.log(`ages  : ${ages}`);
-console.log(`maxAge: ${maxAge}`);
-console.log(`timoStr  : ${timoStr}`);
-console.log(`timoArray  : ${timoArray}`);
-console.log(`newTimoStr  : ${newTimoStr}`);
+console.log(`Q1 - ages  : ${ages}`);
+console.log(`Q1 - maxAge: ${maxAge}`);
+console.log(`Q1 - timoStr  : ${timoStr}`);
+console.log(`Q1 - timoArray  : ${timoArray}`);
+console.log(`Q1 - newTimoStr  : ${newTimoStr}`);
 
 // Q2 : 
 
@@ -150,17 +150,32 @@ console.log(`newTimoStr  : ${newTimoStr}`);
 const shiftCodePoint = char => char.codePointAt(0) - 'a'.codePointAt(0) + 9398;
 
 // tests d'exécution de la fonction shiftCodePoint
-console.log(`shiftCodePoint('a') : ${shiftCodePoint('a')}`);
-console.log(`shiftCodePoint('b') : ${shiftCodePoint('b')}`);
-console.log(`shiftCodePoint('c') : ${shiftCodePoint('c')}`);
+console.log(`Q2 - shiftCodePoint('a') : ${shiftCodePoint('a')}`);
+console.log(`Q2 - shiftCodePoint('b') : ${shiftCodePoint('b')}`);
+console.log(`Q2 - shiftCodePoint('c') : ${shiftCodePoint('c')}`);
 
 // Q3 : 
-
-const shiftCodePointList = str => str.split('').map(shiftCodePoint);
+/* give the code point of a character
+ * @param str (String) a string
+ * @return (Array) the list of code point of the characters
+*/  
+const shiftCodePointList = str => [...str].map(shiftCodePoint);
 
 // tests d'exécution de la fonction shiftCodePointList
-console.log(`shiftCodePointList('timoleon') : ${shiftCodePointList('timoleon')}`);
+console.log(`Q3 - shiftCodePointList('timoleon') : ${shiftCodePointList('timoleon')}`);
 
+
+// Q4 : 
+/* give the code point of a character
+ * @param list (Array) list of persons
+ * @return (Array) the list of code point of the characters
+*/
+const shiftCodePointList2 = list => list.map(person => 
+    [...person.name].map(char => String.fromCodePoint(shiftCodePoint(char))).join('')
+);
+
+// tests d'exécution de la fonction shiftCodePointList2
+console.log(`Q4 - shiftCodePointList2(persons) : ${shiftCodePointList2(persons)}`);
 
 
 
