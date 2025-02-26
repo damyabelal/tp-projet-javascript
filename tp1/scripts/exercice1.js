@@ -211,6 +211,13 @@ console.log(`Q2 - multiples(10, numbers): ${multiples(2, numbers)}`);
 /********** EXERCICE 5 ***********************/
 console.log(` *** EXERCICE 5 *** `);
 
+// Q1 :
+/* print each element of the list
+ * @param numbers (Array) list of numbers
+*/
+numbers.forEach(number => console.log(number));
+
+
 
 
 
