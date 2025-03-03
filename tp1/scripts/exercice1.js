@@ -337,6 +337,16 @@ const lesReponses = [
                   {nom : 'Timo Leon', present : 'non'},
                  ];
 
+// Q1 : 
+/* return the list of participants to the party */
+const participants = (lesInvites, lesReponses) => {
+    const reponsesNon = lesReponses.filter(response => response.present === 'non').map(response => response.nom);
+    return lesInvites.filter(invite => !reponsesNon.includes(invite));
+};
+
+// test d'éxecution pour la fonction participants()
+console.log(participants(lesInvites, lesReponses));
+
 /*********************************************/
 
 /********** EXERCICE 9 ***********************/
