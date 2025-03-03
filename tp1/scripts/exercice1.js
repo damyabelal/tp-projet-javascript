@@ -251,8 +251,20 @@ myForEach(persons, person => console.log(`Q4 - myForEach person: ${person.name} 
 /********** EXERCICE 6 ***********************/
 console.log(` *** EXERCICE 6 *** `);
 
+// Q1 : 
+/* filter the list to keep only the elements smaller than 5
+ * @param numbers (Array) list of numbers
+ * @return (Array) the list of numbers smaller than 5
+*/
+const numbersBelowFive = numbers.filter(number => number < 5);
 
-/*********************************************/
+// tests d'exécution de la fonction numbersBelowFive
+console.log(`Q1 - numbersBelowFive: ${numbersBelowFive}`);
+
+
+
+
+/********************************************/
 
 
 /********** EXERCICE 7 ***********************/
