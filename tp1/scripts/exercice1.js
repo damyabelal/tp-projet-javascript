@@ -261,7 +261,20 @@ const numbersBelowFive = numbers.filter(number => number < 5);
 // tests d'exécution de la fonction numbersBelowFive
 console.log(`Q1 - numbersBelowFive: ${numbersBelowFive}`);
 
+// Q2 : 
+// lecture sur les documentations des méthodes split de String et join de Array 
 
+// Q3 : 
+/* create an acronym from the first letters of each word longer than 3 characters
+ * @param phrase (string) a sentence
+ * @return (string) acronym of first letters of words longer than 3 characters
+*/
+const createAcronym = phrase => 
+    phrase.split(' ').filter(word => word.length > 3).map(word => word[0].toUpperCase()).join('');
+
+// test d'exécution de la fonction createAcronym : 
+console.log(`Q3 - ${createAcronym('formations en informatique de lille')}`); 
+console.log(`Q3 - ${createAcronym('société nationale des chemins de fer français')}`);
 
 
 /********************************************/
