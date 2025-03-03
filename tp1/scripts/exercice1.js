@@ -283,6 +283,18 @@ console.log(`Q3 - ${createAcronym('société nationale des chemins de fer franç
 /********** EXERCICE 7 ***********************/
 console.log(` *** EXERCICE 7 *** `);
 
+// Q1 : 
+/* calculate the total number of characters in the words of a sentence
+ * @param phrase (string) a sentence
+ * @return (number) total number of characters in the words
+*/
+const nbLetters = phrase => phrase.split(' ').reduce((total, word) => total + word.length, 0);  
+
+// test d'exécution de la fonction nbLetters
+const test = "Formations en Informatique de Lille";
+console.log(`Q1 - ${nbLetters(test)}`);  
+
+
 
 /*********************************************/
 
