@@ -294,6 +294,17 @@ const nbLetters = phrase => phrase.split(' ').reduce((total, word) => total + wo
 const test = "Formations en Informatique de Lille";
 console.log(`Q1 - ${nbLetters(test)}`);  
 
+// Q2 : 
+/* return the greatest of two numbers */
+const max = (a, b) => a > b ? a : b;
+
+/* find the maximum number in an array */
+const maxNumber = list => list.reduce(max);  
+
+// test d'exécution de la fonction maxNumber
+console.log(`Q2 - ${maxNumber(numbers)}`);  
+
+
 
 
 /*********************************************/
