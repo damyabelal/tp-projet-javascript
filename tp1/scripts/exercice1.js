@@ -305,6 +305,14 @@ const maxNumber = list => list.reduce(max);
 console.log(`Q2 - ${maxNumber(numbers)}`);  
 
 
+// Q3 : 
+/* find the maximum number in an array using Math.max and spread */
+const maxNumber2 = numbers => Math.max(...numbers);
+
+// test d'exécution de la fonction maxNumber 2 
+console.log(`Q3 - ${maxNumber2(numbers)}`);  
+
+   
 
 
 /*********************************************/
