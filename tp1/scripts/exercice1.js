@@ -312,7 +312,14 @@ const maxNumber2 = numbers => Math.max(...numbers);
 // test d'exécution de la fonction maxNumber 2 
 console.log(`Q3 - ${maxNumber2(numbers)}`);  
 
-   
+// Q4 : 
+/* return the sum of any number of parameters */
+const sum = (...param) => param.reduce((total, num) => total + num, 0);
+
+// test d'exécution de la fonction sum
+console.log(`Q4 - ${sum()}`);    
+console.log(`Q4 - ${sum(1,2)}`);   
+console.log(`Q4 - ${sum(1,2,3,4,5)}`);         
 
 
 /*********************************************/
