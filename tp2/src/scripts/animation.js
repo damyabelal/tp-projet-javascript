@@ -11,6 +11,25 @@ export default class Animation {
       this.req = null;
     }
 
+    animate = () => {
+      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ball.move(this.canvas);
+      this.ball.draw(this.context);
+      this.req = window.requestAnimationFrame(this.animate.bind(this));
+    }
+
+    startAndStop() {
+      if (this.running) {
+        window.cancelAnimationFrame(this.req);
+        this.running = false;
+      } else {
+        this.running = true;
+        this.req = window.requestAnimationFrame(this.animate.bind(this));
+    }
+    
+    }
+    
+
 
   
 

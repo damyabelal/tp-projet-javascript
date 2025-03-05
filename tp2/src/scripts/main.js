@@ -25,5 +25,3 @@ window.addEventListener("DOMContentLoaded",init);
 //
 console.log('le bundle a été généré');
 
-
-
