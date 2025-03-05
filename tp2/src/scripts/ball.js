@@ -5,12 +5,18 @@ import ballImgSrc from './assets/images/ball.png';
 /* TYPE Ball */
 export default class Ball {
 
-	static BALL_WIDTH = 48;
+  static BALL_WIDTH = 48;
+  static BALL_HEIGHT = 48;
 
-  constructor() {
-    // A COMPLETER...
+  constructor(x, y, deltaX = +3, deltaY = -2) {
     this.image = this.#createImage(ballImgSrc);
+    this.x = x;
+    this.y = y;
+    this.deltaX = deltaX;
+    this.deltaY = deltaY;
+
   }
+
 
   /* draw this ball, using the given drawing 2d context */
   draw(context) {
