@@ -17,10 +17,15 @@ export default class Ball {
 
   }
 
+  move(canvas) {
+    this.x += this.deltaX;
+    this.y += this.deltaY;
+  }
 
   /* draw this ball, using the given drawing 2d context */
   draw(context) {
-    alert('vous devez coder la méthode draw() de Ball');
+    // alert('vous devez coder la méthode draw() de Ball');
+    context.drawImage(this.image, this.x, this.y);
   }
 
 
