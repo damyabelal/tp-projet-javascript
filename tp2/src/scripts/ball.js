@@ -18,6 +18,12 @@ export default class Ball {
   }
 
   move(canvas) {
+    if (this.x + this.deltaX < 0 ||this.x +this.deltaX + Ball.BALL_WIDTH > canvas.width) {
+      this.deltaX = -this.deltaX;
+    }
+    if (this.y + this.deltaY < 0 ||this.y + this.deltaY + Ball.BALL_HEIGHT > canvas.height) {
+      this.deltaY = -this.deltaY;
+    }
     this.x += this.deltaX;
     this.y += this.deltaY;
   }
