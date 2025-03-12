@@ -48,25 +48,12 @@ export default class Ball {
     return this.image.height;
   }
 
+  collisionWith(obstacle) {
+    return this.x < obstacle.x + obstacle.width &&
+      this.x + this.width > obstacle.x &&
+      this.y < obstacle.y + obstacle.height &&
+      this.y + this.height > obstacle.y;
+  }
+
 }
-
-collisionWith(obstacle) {
-  let x1 = this.x;
-  let y1 = this.y;
-  let x2 = this.x + this.width;
-  let y2 = this.y + this.height;
-
-  let x1Obstacle = obstacle.x;
-  let y1Obstacle = obstacle.y;
-  let x2Obstacle = obstacle.x + obstacle.width;
-  let y2Obstacle = obstacle.y + obstacle.height;
-
-  let p1X = Math.max(x1, x1Obstacle);
-  let p1Y = Math.max(y1, y1Obstacle);
-  let p2X = Math.min(x2, x2Obstacle);
-  let p2Y = Math.min(y2, y2Obstacle);
-  
-  return p1X < p2X && p1Y < p2Y;
-}
-
-
+ 
