@@ -78,4 +78,6 @@ export default class KeyManager {
    noKeyPressed() {
       return ! this.oneKeyPressed();
    }
+   // j'ai bien consulté le code de cette classe :) 
+   
 }
