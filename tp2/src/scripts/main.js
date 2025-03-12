@@ -18,6 +18,7 @@ const init = () => {
   document.getElementById("stopStartBall").addEventListener("click", () => animation.startAndStop());
   document.getElementById("addBall").addEventListener("click", () => animation.addBall());
   window.addEventListener('keydown', animation.keyDownActionHandler.bind(animation));
+  window.addEventListener('keyup', animation.keyUpActionHandler.bind(animation));
 }
 
 window.addEventListener("DOMContentLoaded", init);
