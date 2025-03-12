@@ -9,6 +9,14 @@ export default class StarShip extends Mobile {
         this.moving = "immobile"; // up, down, immobile
     }
 
+    up() {
+        return this.moving = "up";
+    } 
+
+    down(){
+        return this.moving = "down";
+    }
+
 
 
 }
