@@ -2,11 +2,11 @@
 export default class Game {
 
    #canvas;
-   // à compléter
+   #starship;
 
    constructor(canvas) {
       this.#canvas = canvas;
-      // à compléter
+      this.#starship = this.#starship;
    }
 
    /** donne accès au canvas correspondant à la zone de jeu */
