@@ -19,19 +19,15 @@ export default class Animation {
     const y = this.alea(this.canvas.height);
     const deltaX = this.alea(11) - 5; 
     const deltaY = this.alea(11) - 5; 
-
     if (deltaX === 0 && deltaY === 0) {
       return;  
     }
-
-   
     const ball = new Ball(x, y, deltaX, deltaY);
     this.balls.push(ball);
   }
 
   animate() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
     this.balls.forEach(ball => {
       ball.move(this.canvas); 
       ball.draw(this.context); 
@@ -48,4 +44,6 @@ export default class Animation {
       this.req = window.requestAnimationFrame(this.animate.bind(this));
     }
   }
+
 }
+

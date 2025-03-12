@@ -49,11 +49,11 @@ export default class Ball {
   }
 
   collisionWith(obstacle) {
-    return this.x < obstacle.x + obstacle.width &&
-      this.x + this.width > obstacle.x &&
-      this.y < obstacle.y + obstacle.height &&
-      this.y + this.height > obstacle.y;
+    const p1x = Math.max(this.x, obstacle.x);
+    const p1y = Math.max(this.y, obstacle.y);
+    const p2x = Math.min(this.x + this.width, obstacle.x + obstacle.width);
+    const p2y = Math.min(this.y + this.height, obstacle.y + obstacle.height);
+    return p1x < p2x && p1y < p2y;
   }
-
 }
  
