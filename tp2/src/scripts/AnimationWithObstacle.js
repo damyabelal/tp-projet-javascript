@@ -1,11 +1,13 @@
 // animationWithObstacle.js
 import Animation from './animation';  
+import KeyManager from './keyManager';
 import Obstacle from './obstacle';   
 
 export default class AnimationWithObstacle extends Animation {
   constructor(canvas, obstacle) {
     super(canvas);  
-    this.obstacle = obstacle;  
+    this.obstacle = obstacle; 
+    this.keyManager = new KeyManager(); 
   }
 
   animate() {
@@ -16,4 +18,20 @@ export default class AnimationWithObstacle extends Animation {
     this.balls.forEach(ball => ball.draw(this.context));
     this.req = window.requestAnimationFrame(this.animate.bind(this));
   }
+  
+  keyDownActionHandler(event) {
+    switch (event.key) {
+        case "ArrowLeft":
+        case "Left":
+            this.keyManager.leftPressed();
+            break;
+        case "ArrowRight":
+        case "Right":
+            this.keyManager.rightPressed();
+            break;
+        default: return;
+    }
+    event.preventDefault();
+ }
+
 }
