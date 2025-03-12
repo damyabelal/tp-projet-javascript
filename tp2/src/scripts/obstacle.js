@@ -13,17 +13,26 @@ export default class Obstacle {
         context.fillRect(this.x, this.y, this.width, this.height);
     }
 
-    moveLeft() {              
+     moveLeft() {              
         this.deltaX =  - 10;   
      }
      moveRight() {
         this.deltaX =  + 10;  
      }
+     moveUp() {
+        this.deltaY = -10;
+        console.log("up");
+     }
+     moveDown() {
+        this.deltaY = +10;
+   }
      stopMoving() {
         this.deltaX = 0;
+        this.deltaY = 0;
      }
      move(box) {            
         this.x = Math.max(0, Math.min(box.width - this.width, this.x + this.deltaX));
+        this.y = Math.max(0, Math.min(box.height - this.height, this.y + this.deltaY));
      }
      handleMoveKeys(keyManager) {
         this.stopMoving();    
@@ -31,6 +40,10 @@ export default class Obstacle {
            this.moveLeft();
         if (keyManager.right) 
            this.moveRight();
+        if (keyManager.up) 
+           this.moveUp();
+        if (keyManager.down)
+            this.moveDown();
      }
 }
 
