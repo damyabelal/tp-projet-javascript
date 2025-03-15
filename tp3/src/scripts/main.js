@@ -1,15 +1,13 @@
-
-// importation de la classe Game.js
+// Importation de la classe Game
 import Game from './game.js';
 
-
-// mise en place de l'action des clics sur les boutons + les gestionnaires du clavier pour contrôler Greedy
 const init = () => {
-   const canvas = document.getElementById("stars");
+   const canvas = document.getElementById("stars"); // Assurez-vous que l'ID correspond bien à votre canvas
    const game = new Game(canvas);
-}
 
-window.addEventListener("load", init);
+   game.start();  
+};
 
-//
-console.log('le bundle a été généré');
+window.addEventListener("DOMContentLoaded", init);
+
+console.log('Le bundle a été généré');

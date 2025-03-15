@@ -1,9 +1,10 @@
 // starship.js
 import Mobile from './mobile';
+import starshipImg from './assets/images/vaisseau-ballon-petit.png';
 
 export default class StarShip extends Mobile {
-  constructor(x, y, imageSrc = './assets/images/vaisseau-ballon-petit.png') {
-    super(x, y, imageSrc, 0, 8); 
+  constructor(x, y) {
+    super(x, y, starshipImg, 0, 8);
     this.moving = null;  
   }
 
