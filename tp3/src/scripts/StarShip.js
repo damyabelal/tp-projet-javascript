@@ -1,22 +1,34 @@
-import Mobile from "./mobile";
+// starship.js
+import Mobile from './mobile';
 
 export default class StarShip extends Mobile {
-    constructor(x, y) {
-        const imgSource = "src/scripts/assets/images/vaisseau-ballon-petit.png";
-        const dx = 0;
-        const dy = 8;
-        super(x, y, imgSource, dx, dy);
-        this.moving = "immobile"; // up, down, immobile
-    }
+  constructor(x, y, imageSrc = './assets/images/vaisseau-ballon-petit.png') {
+    super(x, y, imageSrc, 0, 8); 
+    this.moving = null;  
+  }
 
-    up() {
-        return this.moving = "up";
-    } 
+  get up() {
+    return this.moving === 'up';
+  }
 
-    down(){
-        return this.moving = "down";
-    }
+  get down() {
+    return this.moving === 'down';
+  }
 
+  moveUp() {
+    this.moving = 'up';
+  }
 
+  moveDown() {
+    this.moving = 'down';
+  }
 
+  stopMoving() {
+    this.moving = null; 
+  }
+
+  move(game) {
+    if (this.up && this.y > 0) this.y -= this.deltaY;
+    if (this.down && this.y < game.canvas.height - this.image.height) this.y += this.deltaY;
+  }
 }

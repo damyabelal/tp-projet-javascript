@@ -1,26 +1,21 @@
 
 export default class Mobile {
-
-    constructor(x, y, imgSource, dx = 0, dy = 0) {
-        this.x = x;
-        this.y = y;
-        this.imgSource= imgSource;
-        this.dx = dx;   
-        this.dy = dy;
-
+    constructor(x, y, imageSrc, deltaX = 0, deltaY = 0) {
+      this.x = x;
+      this.y = y;
+      this.image = new Image();
+      this.image.src = imageSrc;
+      this.deltaX = deltaX;
+      this.deltaY = deltaY;
     }
-
-draw(context) {
-    const img = new Image();
-    img.src = this.image;
-    img.onload = () => {
-        context.drawImage(img, this.x, this.y);
-    };
-}
-
-move() {
-    this.x += this.dx;
-    this.y += this.dy;
-}
-
-}
+  
+    draw(context) {
+      context.drawImage(this.image, this.x, this.y);
+    }
+  
+    move() {
+      this.x += this.deltaX;
+      this.y += this.deltaY;
+    }
+  }
+  
