@@ -1,5 +1,6 @@
 
 import StarShip from './StarShip';
+import KeyManager from './keyManager';
 
 export default class Game {
   constructor(canvasId) {
@@ -25,4 +26,37 @@ export default class Game {
   stop() {
     window.cancelAnimationFrame(this.req); 
   }
+
+  keyDownActionHandler(event) {
+   switch (event.key) {
+     case "ArrowUp":
+     case "Up":
+       this.keyManager.upPressed();
+       break;
+     case "ArrowDown":
+     case "Down":
+       this.keyManager.downPressed();
+     break;
+     default: return;
+   }
+   event.preventDefault();
+ }
+
+ keyUpActionHandler(event) {
+   switch (event.key) {
+       case "ArrowUp":
+       case "Up":
+          this.keyManager.upReleased();
+          break;
+       case "ArrowDown":
+       case "Down":
+          this.keyManager.downReleased();
+          break
+      default: return;
+   }
+   event.preventDefault();
+}
+
+
+
 }
