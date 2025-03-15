@@ -1,8 +1,7 @@
-// Importation de la classe Game
 import Game from './game.js';
 
 const init = () => {
-   const canvas = document.getElementById("stars"); // Assurez-vous que l'ID correspond bien à votre canvas
+   const canvas = document.getElementById("stars"); 
    const game = new Game(canvas);
 
    game.start();  
