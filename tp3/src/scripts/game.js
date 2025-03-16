@@ -1,11 +1,13 @@
 import StarShip from './StarShip.js';
 import KeyManager from './keyManager.js';
+import Saucer from './saucer.js';
 
 export default class Game {
   constructor(canvas) {
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
     this.starship = new StarShip(40, this.canvas.height / 2);  
+    this.saucers = [];
     this.req = null;
     this.keyManager = new KeyManager();
   }
@@ -23,15 +25,34 @@ export default class Game {
     }
     this.starship.move(this.canvas); 
     this.starship.draw(this.context); 
+
+    this.saucers.forEach(saucer => {
+      saucer.move(this);
+      saucer.draw(this.context);
+    });
+
     this.req = window.requestAnimationFrame(this.animate.bind(this)); 
   }
 
   start() {
     this.animate(); 
+    this.animateSaucer();  
   }
 
   stop() {
     window.cancelAnimationFrame(this.req); 
+  }
+
+  animateSaucer() {
+    setInterval(() => {
+      const y = Math.random() * (this.canvas.height - 50); 
+      const saucer = new Saucer(this.canvas.width, y);  
+      this.saucers.push(saucer);
+    }, 2000); // genre on fait apparaitre un saucer chaque 2 secondes ce qui explique l'utilisation de 2000 dans le setInterval
+  }
+
+  removeSaucer(saucer) {
+    this.saucers = this.saucers.filter(s => s !== saucer);
   }
 
   keyDownActionHandler(event) {
