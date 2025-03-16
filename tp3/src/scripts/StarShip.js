@@ -28,8 +28,13 @@ export default class StarShip extends Mobile {
     this.moving = null; 
   }
 
-  move(game) {
-    if (this.up && this.y > 0) this.y -= this.deltaY;
-    if (this.down && this.y < game.canvas.height - this.image.height) this.y += this.deltaY;
+  move(canvas) {
+    if (this.up && this.y > 0) {
+      this.y -= this.deltaY;
+    }
+    if (this.down && this.y < canvas.height - this.image.height) {
+      this.y += this.deltaY;
+    }
   }
 }
+

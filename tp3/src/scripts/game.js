@@ -1,21 +1,28 @@
-
-import StarShip from './StarShip';
-import KeyManager from './keyManager';
+import StarShip from './StarShip.js';
+import KeyManager from './keyManager.js';
 
 export default class Game {
-  constructor(canvasId) {
-    this.canvas = canvasId;
+  constructor(canvas) {
+    this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
     this.starship = new StarShip(40, this.canvas.height / 2);  
     this.req = null;
+    this.keyManager = new KeyManager();
   }
 
   animate() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height); 
-
+    if (this.keyManager.up){
+      this.starship.moveUp();
+    }
+    else if (this.keyManager.down) {
+      this.starship.moveDown();
+    }
+    else { 
+      this.starship.stopMoving();
+    }
     this.starship.move(this.canvas); 
     this.starship.draw(this.context); 
-
     this.req = window.requestAnimationFrame(this.animate.bind(this)); 
   }
 
@@ -28,35 +35,32 @@ export default class Game {
   }
 
   keyDownActionHandler(event) {
-   switch (event.key) {
-     case "ArrowUp":
-     case "Up":
-       this.keyManager.upPressed();
-       break;
-     case "ArrowDown":
-     case "Down":
-       this.keyManager.downPressed();
-     break;
-     default: return;
-   }
-   event.preventDefault();
- }
-
- keyUpActionHandler(event) {
-   switch (event.key) {
-       case "ArrowUp":
-       case "Up":
-          this.keyManager.upReleased();
-          break;
-       case "ArrowDown":
-       case "Down":
-          this.keyManager.downReleased();
-          break
+    switch (event.key) {
+      case "ArrowUp":
+      case "Up":
+        this.keyManager.upPressed();
+        break;
+      case "ArrowDown":
+      case "Down":
+        this.keyManager.downPressed();
+        break;
       default: return;
-   }
-   event.preventDefault();
-}
+    }
+    event.preventDefault();
+  }
 
-
-
+  keyUpActionHandler(event) {
+    switch (event.key) {
+      case "ArrowUp":
+      case "Up":
+        this.keyManager.upReleased();
+        break;
+      case "ArrowDown":
+      case "Down":
+        this.keyManager.downReleased();
+        break;
+      default: return;
+    }
+    event.preventDefault();
+  }
 }
