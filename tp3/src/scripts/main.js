@@ -11,6 +11,9 @@ const init = () => {
    const boutonNouvelleSoucoupe = document.getElementById("nouvelleSoucoupe");
    boutonNouvelleSoucoupe.addEventListener("click", game.addSaucer.bind(game));
 
+   const boutonFlotteSoucoupe = document.getElementById("flotteSoucoupes");
+   boutonFlotteSoucoupe.addEventListener("click", game.addFlotteSaucer.bind(game));
+
 };
 
 window.addEventListener("DOMContentLoaded", init);
