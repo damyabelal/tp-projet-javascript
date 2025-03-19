@@ -35,20 +35,26 @@ export default class Game {
   }
 
   start() {
-    this.animate(); 
-    this.animateSaucer();  
+    this.animate();
   }
 
   stop() {
     window.cancelAnimationFrame(this.req); 
   }
 
-  animateSaucer() {
+  /*animateSaucer() {
     setInterval(() => {
       const y = Math.random() * (this.canvas.height - 50); 
       const saucer = new Saucer(this.canvas.width, y);  
       this.saucers.push(saucer);
     }, 2000); // genre on fait apparaitre un saucer chaque 2 secondes ce qui explique l'utilisation de 2000 dans le setInterval
+  }
+  */
+
+  addSaucer() {
+    const y = Math.random() * (this.canvas.height - 50); 
+    const saucer = new Saucer(this.canvas.width, y);  
+    this.saucers.push(saucer);
   }
 
   removeSaucer(saucer) {

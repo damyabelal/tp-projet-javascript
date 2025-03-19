@@ -7,6 +7,10 @@ const init = () => {
 
    window.addEventListener('keydown', game.keyDownActionHandler.bind(game));
    window.addEventListener('keyup', game.keyUpActionHandler.bind(game));
+
+   const boutonNouvelleSoucoupe = document.getElementById("nouvelleSoucoupe");
+   boutonNouvelleSoucoupe.addEventListener("click", game.addSaucer.bind(game));
+
 };
 
 window.addEventListener("DOMContentLoaded", init);
