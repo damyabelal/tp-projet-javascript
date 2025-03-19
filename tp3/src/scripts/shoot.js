@@ -14,6 +14,11 @@ export default class Shoot extends Mobile {
     return p1x < p2x && p1y < p2y;
 }
 
+  findCollision(saucers) {
+    return saucers.find(saucer => !saucer.isFalling() && this.collisionWith(saucer));
+
+  }
+
 }
 
 
