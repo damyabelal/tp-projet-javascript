@@ -13,9 +13,11 @@ export default class Saucer extends Mobile {
     this.y += this.deltaY;
     if (this.x + this.image.width < 0) {
       game.removeSaucer(this); 
+      game.score -= 1000;
+      game.updateScore();
     }
     if (this.falling && this.y >= game.canvas.height - this.image.height) {
-      game.removeSaucer(this);
+      game.removeSaucer(this); 
     }
   }
 
@@ -30,3 +32,5 @@ export default class Saucer extends Mobile {
   }
 
 }
+
+
