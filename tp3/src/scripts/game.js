@@ -35,6 +35,7 @@ export default class Game {
       if (saucerHit) {
         saucerHit.fall(); 
         this.score += 200; 
+        this.updateScore();
         return false; 
       }
       return shoot.x < this.canvas.width; 
@@ -89,6 +90,10 @@ export default class Game {
   fire() {
     const shoot = new Shoot(this.starship.x + this.starship.image.width, this.starship.y + this.starship.image.height / 2);
     this.shoots.push(shoot);
+  }
+
+  updateScore() {
+    document.getElementById("score").textContent = this.score;
   }
 
   keyDownActionHandler(event) {
