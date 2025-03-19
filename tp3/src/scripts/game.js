@@ -1,6 +1,7 @@
 import StarShip from './StarShip.js';
 import KeyManager from './keyManager.js';
 import Saucer from './saucer.js';
+import Shoot from './shoot.js';
 
 export default class Game {
   constructor(canvas) {
@@ -10,10 +11,14 @@ export default class Game {
     this.saucers = [];
     this.req = null;
     this.keyManager = new KeyManager();
+    this.shoots = [];
+    this.score = 0;
   }
 
   animate() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height); 
+
+    // gestion des touches up et down
     if (this.keyManager.up){
       this.starship.moveUp();
     }
@@ -23,13 +28,33 @@ export default class Game {
     else { 
       this.starship.stopMoving();
     }
-    this.starship.move(this.canvas); 
-    this.starship.draw(this.context); 
 
+    // gestion des tirs
+    this.shoots = this.shoots.filter(shoot => { 
+      const saucerHit = shoot.findCollision(this.saucers);
+      if (saucerHit) {
+        saucerHit.fall(); 
+        this.score += 200; 
+        return false; 
+      }
+      return shoot.x < this.canvas.width; 
+    });
+
+    // on move , dessine les tirs
+    this.shoots.forEach(shoot => {
+      shoot.move();
+      shoot.draw(this.context);
+    });
+
+    // on move , dessine les soucoupes
     this.saucers.forEach(saucer => {
       saucer.move(this);
       saucer.draw(this.context);
     });
+
+    // on move , dessine le vaissau
+    this.starship.move(this.canvas); 
+    this.starship.draw(this.context); 
 
     this.req = window.requestAnimationFrame(this.animate.bind(this)); 
   }
@@ -61,6 +86,11 @@ export default class Game {
     this.saucers = this.saucers.filter(s => s !== saucer);
   }
 
+  fire() {
+    const shoot = new Shoot(this.starship.x + this.starship.image.width, this.starship.y + this.starship.image.height / 2);
+    this.shoots.push(shoot);
+  }
+
   keyDownActionHandler(event) {
     switch (event.key) {
       case "ArrowUp":
@@ -71,7 +101,11 @@ export default class Game {
       case "Down":
         this.keyManager.downPressed();
         break;
-      default: return;
+      case " ":
+        this.fire();
+        break;
+      default:
+        return;
     }
     event.preventDefault();
   }
@@ -91,3 +125,4 @@ export default class Game {
     event.preventDefault();
   }
 }
+
