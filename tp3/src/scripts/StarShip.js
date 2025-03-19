@@ -1,4 +1,4 @@
-// starship.js
+
 import Mobile from './mobile';
 import starshipImg from './assets/images/vaisseau-ballon-petit.png';
 
