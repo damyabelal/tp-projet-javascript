@@ -3,6 +3,7 @@ import KeyManager from './keyManager.js';
 import Saucer from './saucer.js';
 import Shoot from './shoot.js';
 
+
 export default class Game {
   constructor(canvas) {
     this.canvas = canvas;
@@ -13,6 +14,7 @@ export default class Game {
     this.keyManager = new KeyManager();
     this.shoots = [];
     this.score = 0;
+    this.flotteSaucerInterval = null;
   }
 
   animate() {
@@ -66,14 +68,19 @@ export default class Game {
 
   stop() {
     window.cancelAnimationFrame(this.req); 
-  }
-
+  } 
+  
   addFlotteSaucer() {
-    setInterval(() => {
-      const y = Math.random() * (this.canvas.height - 50); 
-      const saucer = new Saucer(this.canvas.width, y);  
-      this.saucers.push(saucer);
-    }, 750); // on fait apparaitre un saucer chaque 0.75 secondes 
+    if (this.flotteSaucerInterval) {
+      clearInterval(this.flotteSaucerInterval);
+      this.flotteSaucerInterval = null;
+    } else {
+      this.flotteSaucerInterval = setInterval(() => {
+        const y = Math.random() * (this.canvas.height - 50); 
+        const saucer = new Saucer(this.canvas.width, y);  
+        this.saucers.push(saucer);
+      }, 750); 
+    }
   }
 
   addSaucer() {
