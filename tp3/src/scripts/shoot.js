@@ -20,5 +20,5 @@ export default class Shoot extends Mobile {
   }
 
 }
-
+ 
 
