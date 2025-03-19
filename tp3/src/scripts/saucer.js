@@ -10,8 +10,12 @@ export default class Saucer extends Mobile {
 
   move(game) {
     this.x += this.deltaX;
+    this.y += this.deltaY;
     if (this.x + this.image.width < 0) {
       game.removeSaucer(this); 
+    }
+    if (this.falling && this.y >= game.canvas.height - this.image.height) {
+      game.removeSaucer(this);
     }
   }
 
@@ -22,9 +26,7 @@ export default class Saucer extends Mobile {
   fall() {
     this.falling = true;
     this.deltaX = 0;
-    this.deltaY = -5; // 5 parceque on veut que la secoupe tombe vers le bas du coup on change sa cordonnée
+    this.deltaY = 3; 
   }
 
 }
-
-
