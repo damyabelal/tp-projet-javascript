@@ -11,6 +11,7 @@ const ImageApp = () => {
 
   const [image, setImage] = useState("../images/image5.jpg");
   const [texte, setTexte] = useState("la plus belle....");
+  const [filterText, setFilterText] = useState(""); 
 
   const imageChanged = (newImage, newText) => {
     setImage(newImage);
