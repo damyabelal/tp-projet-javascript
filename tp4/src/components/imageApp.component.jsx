@@ -18,6 +18,10 @@ const ImageApp = () => {
     setTexte(newText);
   };
 
+  const filterChanged = (newFilterText) => {
+    setFilterText(newFilterText);
+  };
+
   return (
     <div> 
     <ImageWall images = {dataImages}  hover = {imageChanged} />
