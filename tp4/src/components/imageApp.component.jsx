@@ -8,7 +8,9 @@ import ImageDetails from "./imageDetails.component.jsx";
 const ImageApp = () => {
 
   return (
-    <div> <ImageWall /> <ImageDetails /></div>
+    <div> 
+    <ImageWall images = {dataImages} />
+    <ImageDetails /></div>
   );
 }
 export default ImageApp;
