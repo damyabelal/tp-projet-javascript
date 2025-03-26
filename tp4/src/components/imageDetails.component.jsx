@@ -2,9 +2,14 @@ import '../assets/style/murImages.css';
 
 import dataImages from "../data/dataImages.js"
 
-const ImageDetails = () => {
+const ImageDetails = ({image} , {texte}) => {
     return (
-    <div id="details">details</div>
+    <div id="details">
+      {(<img src={image} alt={image} /> )}
+      {(<div className="legende"> {texte} </div>)}
+  
+    </div>
+    
     );
   }
   

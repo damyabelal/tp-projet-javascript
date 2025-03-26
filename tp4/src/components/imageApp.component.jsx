@@ -10,7 +10,8 @@ const ImageApp = () => {
   return (
     <div> 
     <ImageWall images = {dataImages} />
-    <ImageDetails /></div>
+    <ImageDetails image = {"../images/image5.jpg"} texte = {"la plus belle...."} />
+    </div>
   );
 }
 export default ImageApp;
