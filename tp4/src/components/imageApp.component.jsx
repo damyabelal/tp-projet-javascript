@@ -19,8 +19,8 @@ const ImageApp = () => {
 
   return (
     <div> 
-    <ImageWall images = {dataImages} />
-    <ImageDetails image = {"../images/image5.jpg"} texte = {"la plus belle...."} />
+    <ImageWall images = {dataImages}  hover = {imageChanged} />
+    <ImageDetails image = {image} texte = {texte} />
     </div>
   );
 }
