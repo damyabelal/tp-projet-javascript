@@ -2,9 +2,12 @@ import '../assets/style/murImages.css';
 
 import dataImages from "../data/dataImages.js"
 
-const ImageWall = () => {
+
+const ImageWall = ({images}) => {
     return (
-    <div id="mur">mur d'images</div>
+    <div id="mur">
+        {images.map((img) => (<img src={img.image} alt={img.texte} title={img.texte} key={img.image}/>))}
+    </div>
     );
   }
   
