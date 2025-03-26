@@ -7,6 +7,11 @@ const ImageDetails = ({image , texte, filtreText, hoverBis}) => {
     <div id="details">
       <img src={image} alt={texte} /> 
       <div className="legende"> {texte} </div>
+      <input
+       id="filtre" type="text" placeholder="filtre image..."
+       value = {filtreText}
+       onChange = {() => hoverBis(filtreText) }
+       />
     </div>
     
     );
