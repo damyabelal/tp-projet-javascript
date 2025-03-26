@@ -25,7 +25,7 @@ const ImageApp = () => {
   return (
     <div> 
     <ImageWall images = {dataImages}  hover = {imageChanged} />
-    <ImageDetails image = {image} texte = {texte} />
+    <ImageDetails image = {image} texte = {texte} filterText={filterText} hoverBis = {filterChanged}/>
     </div>
   );
 }
