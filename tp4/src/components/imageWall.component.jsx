@@ -7,7 +7,9 @@ const ImageWall = ({images, hover}) => {
     return (
       <div id="mur">
       {images.map((img) => (
-          <img src={img.image} alt={img.texte} title={img.texte} key={img.image} onMouseEnter={() => hover(img.image, img.texte)} 
+          <img src={img.image} alt={img.texte} title={img.texte} key={img.image} onMouseEnter={() => hover(img.image, img.texte) 
+            
+          } 
       />
     ))}
   </div>

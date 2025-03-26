@@ -2,7 +2,7 @@ import '../assets/style/murImages.css';
 
 import dataImages from "../data/dataImages.js"
 
-const ImageDetails = ({image , texte}) => {
+const ImageDetails = ({image , texte, filtreText, hoverBis}) => {
     return (
     <div id="details">
       <img src={image} alt={texte} /> 
