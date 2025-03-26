@@ -10,7 +10,7 @@ const ImageDetails = ({image , texte, filtreText, hoverBis}) => {
       <input
        id="filtre" type="text" placeholder="filtre image..."
        value = {filtreText}
-       onChange = {() => hoverBis(filtreText) }
+       onChange = {(e) => hoverBis(e.target.value) }
        />
     </div>
     
