@@ -16,6 +16,12 @@ const App = () => {
     setTasksDone(prevTasks => [...prevTasks, taskToMark]);
   };
 
+  return (
+    <div className="taskApp">
+      <h1>Gestion des tâches</h1>
+      <AddTask tasks={tasksToDo} setTasksToDo={setTasksToDo} />
+    </div>
+  );
 
 };
 
