@@ -10,6 +10,9 @@ const Todo = ({ tasks, setTasksToDo, setTasksDone }) => {
     task.description.toLowerCase().includes(searchText.toLowerCase())
   );
   const sortedTasks = [...filteredTasks].sort((a, b) => b.priority - a.priority);
+  const search = (e) => {
+    setSearchText(e.target.value);
+  };
 
 }
 
