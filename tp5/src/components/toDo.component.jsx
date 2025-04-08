@@ -13,6 +13,12 @@ const Todo = ({ tasks, setTasksToDo, setTasksDone }) => {
   const search = (e) => {
     setSearchText(e.target.value);
   };
+  return (
+    <div className="tasklist">
+      <h3>Tâches en cours</h3>
+      <div className="filter"><input type="text" placeholder="filtrer" value={searchText} onChange={search}/></div>
+    </div>
+);
 
 }
 
