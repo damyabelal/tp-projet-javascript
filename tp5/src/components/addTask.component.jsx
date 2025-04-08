@@ -7,17 +7,22 @@ const AddTask = ({ setTasksToDo }) => {
 
   const addTask = () => {
     const newTask = {
-      id: `T${Date.now()}`,
-      description: taskDescription,
-      duration: taskDuration,
-      priority: 1,
-      done: false,
+    id: `T${Date.now()}`,
+    description: taskDescription,
+    duration: taskDuration,
+    priority: 1,
+    done: false,
     };
     setTasksToDo(prevTasks => [...prevTasks, newTask]);
     setTaskDescription('');
     setTaskDuration(0);
   };
 
+  return (
+  <div className="addTask">
+    <input type="text" value={taskDescription} onChange={e => setTaskDescription(e.target.value)} placeholder="description"/>
+  </div>
+  );
 
 };
 
