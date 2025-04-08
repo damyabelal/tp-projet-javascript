@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AddTask from './addTask.component.jsx';
 import ToDo from './toDo.component.jsx';
 import Done from './done.component.jsx';
@@ -15,6 +15,11 @@ const App = () => {
     setTasksToDo(prevTasks => prevTasks.filter(task => task.id !== taskId));
     setTasksDone(prevTasks => [...prevTasks, taskToMark]);
   };
+
+  useEffect(() => {
+    const tasksPriority = tasksData.map(task => ({...task, priority: task.priority || 1}));   
+    setTasksToDo(tasksPriority);
+  }, []);  
 
   return (
     <div className="taskApp">
