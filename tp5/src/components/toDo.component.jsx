@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Task from './task.component.jsx';
 import '../assets/style/tasklist.css';
-import Sum from './sum.component.jsx';
+
 
 
 const Todo = ({ tasks, setTasksToDo, setTasksDone }) => {
