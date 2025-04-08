@@ -20,6 +20,8 @@ const App = () => {
     <div className="taskApp">
       <h1>Gestion des tâches</h1>
       <AddTask tasks={tasksToDo} setTasksToDo={setTasksToDo} />
+      <ToDo tasks={tasksToDo} setTasksToDo={setTasksToDo} setTasksDone={setTasksDone} markAsDone={asDone}/>
+      
     </div>
   );
 
