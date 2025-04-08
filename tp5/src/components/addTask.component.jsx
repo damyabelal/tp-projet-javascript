@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import '../assets/style/addtask.css';
 
+/**
+ * addtask is a component to create a new task
+ * user writes a description and a duration then clicks add
+ * the new task is added to the todo list with default priority and not done
+ * after adding the fields are reset to empty
+ * 
+ * @param {function} setTasksToDo - function to update the todo list with the new task
+ */
+
+
 const AddTask = ({ setTasksToDo }) => {
   const [taskDescription, setTaskDescription] = useState('');
   const [taskDuration, setTaskDuration] = useState(0);
