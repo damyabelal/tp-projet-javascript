@@ -21,7 +21,7 @@ const App = () => {
       <h1>Gestion des tâches</h1>
       <AddTask tasks={tasksToDo} setTasksToDo={setTasksToDo} />
       <ToDo tasks={tasksToDo} setTasksToDo={setTasksToDo} setTasksDone={setTasksDone} markAsDone={asDone}/>
-      
+      <Done tasks={tasksDone} />
     </div>
   );
 
