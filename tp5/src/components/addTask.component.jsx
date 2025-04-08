@@ -22,6 +22,7 @@ const AddTask = ({ setTasksToDo }) => {
   <div className="addTask">
     <input type="text" value={taskDescription} onChange={e => setTaskDescription(e.target.value)} placeholder="description"/>
     <input type="number" value={taskDuration} onChange={e => setTaskDuration(Number(e.target.value))} placeholder="duration"/>
+    <button onClick={addTask}> add </button>
   </div>
   );
 
