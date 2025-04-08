@@ -21,14 +21,8 @@ const Todo = ({ tasks, setTasksToDo, setTasksDone }) => {
       <div className="info">
         Il y'a {filteredTasks.length} tâches en cours. Pour une durée de : {filteredTasks.reduce((acc, task) => acc + Number(task.duration), 0)} mn
       </div>
-
       {sortedTasks.map(task => (
-        <Task 
-          key={task.id} 
-          task={task} 
-          setTasksToDo={setTasksToDo} 
-          setTasksDone={setTasksDone} 
-        />
+        <Task key={task.id} task={task} setTasksToDo={setTasksToDo} setTasksDone={setTasksDone} />
       ))}
     </div>
 );
