@@ -9,6 +9,8 @@ const Todo = ({ tasks, setTasksToDo, setTasksDone }) => {
   const filteredTasks = tasks.filter(task =>
     task.description.toLowerCase().includes(searchText.toLowerCase())
   );
+  const sortedTasks = [...filteredTasks].sort((a, b) => b.priority - a.priority);
+
 }
 
 export default Todo;
