@@ -5,6 +5,17 @@ import Done from './done.component.jsx';
 import tasksData from '../data/tasksData';
 import '../assets/style/taskApp.css';
 
+
+/**
+ * app is the main component of the task manager
+ * it shows the title the addtask component the todo list and the done list
+ * it uses two lists one for tasks to do and one for tasks done
+ * when a task is marked as done it moves from todo to done
+ * when the app starts it makes sure all tasks have a priority
+ * 
+ * @returns the full task application interface
+ */
+
 const App = () => {
   const [tasksToDo, setTasksToDo] = useState(tasksData);
   const [tasksDone, setTasksDone] = useState([]);
