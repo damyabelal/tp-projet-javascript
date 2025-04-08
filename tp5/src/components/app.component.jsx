@@ -9,7 +9,14 @@ const App = () => {
   const [tasksToDo, setTasksToDo] = useState(tasksData);
   const [tasksDone, setTasksDone] = useState([]);
 
-  
+  const asDone = (taskId) => {
+    const taskToMark = tasksToDo.find(task => task.id === taskId);
+    taskToMark.done = true;
+    setTasksToDo(prevTasks => prevTasks.filter(task => task.id !== taskId));
+    setTasksDone(prevTasks => [...prevTasks, taskToMark]);
+  };
+
+
 };
 
 export default App;
